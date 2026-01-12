@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 </title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div>
+        <h2>just learning</h2>
+        <h3>task 1: create simple object</h3>
+        <p id="output"></p>
+        <button onclick="show1()" class="btn">Show (simple Obj)</button>
+        <button onclick="show2()" class="btn">Show (Arr Of Obj)</button>
+        <button onclick="show3()" class="btn">Show (loop Arr Of Obj)</button>
+
+    </div>
+
+    <div>
+        <!-- task learning: -->
+        <!-- creating objects dynamically and adding it into array -->
+        <input type="text" id="name" placeholder="Enter Name"><br>
+        <input type="number" id="age" placeholder="Enter Age"><br>
+        <button onclick="addStudent()" class="btn">Add Student</button>
+        <p id="studentList"></p>
+    </div>
+
+    <div>
+        <h3>task 1: student list</h3>
+        <input type="text" placeholder="enter name" id="Sname">
+        <br>
+        <input type="number" placeholder="enter age" id="Sage">
+        <br>
+        <!--<button> Show List </button>-->
+        <button onclick="AddStu()" class="btn"> Add Student </button>
+        <p id="Slist">
+
+        </p><br>
+        <p id="above"></p>
+        <br>
+        <p id="below"></p>
+        <p id="showCount"></p>
+    </div>
+    <!-- part 2 started -->
+    <div>
+        <h3>part 2: Events State & User Flow</h3>
+        <h4>task 1: Button Click Counter</h4>
+        <button onclick="countClicks()" class="btn" id="btnCount">Click Me!</button>
+        <p id="clickCount"></p>
+    </div>
+    <div>
+
+        <h3>task 2: Add/Remove Values</h3>
+        <button onclick="addValue()" class="btn">➕ Add</button>
+        <button onclick="removeValue()" class="btn">➖ Remove</button>
+        <p id="currentValue"></p>
+
+    </div>
+    <div>
+        <h3>task 3: Toggle Text</h3>
+        <button onclick="toggleText()" class="btn">Toggle Text</button>
+        <p id="toggleOutput"></p>
+    </div>
+    <div>
+      
+        <h3>task 4: Username Welcome</h3>
+        <input type="text" id="username" placeholder="Enter username">
+        <button onclick="submitUsername()" class="btn">Submit</button>
+        <p id="displayUsername"></p>
+
+    </div>
+    <div>
+       
+        <h3>task 5: Single Submission</h3>
+        <h3>Task 9.5 — Disable Input Toggle</h3>
+    <input type="text" id="singleInput" placeholder="Type something">
+    <button onclick="singleSubmit()">Toggle Input</button>
+    <p id="submissionMessage"></p>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin-top: 0;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" placeholder="Enter Task" id="itemInput">
+
+        <button class="btn" id="addBtn"> Add </button>
+        <br>
+        <button onclick="setFilter('all')" class="btn">All</button>
+        <button onclick="setFilter('done')" class="btn">Completed</button>
+        <button onclick="setFilter('pending')" class="btn">Pending</button>
+
+
+
+        <br>
+        <p id="Msg"></p>
+
+        <ul id="list" style="list-style:none ;"></ul>
+        <br>
+        <p id="itemCount"></p>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

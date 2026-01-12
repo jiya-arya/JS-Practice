@@ -1,0 +1,116 @@
+test 1
+
+1. 
+console.log(a == b) // output true
+(a === b) // false
+because , === is stick equal to which compare value as well its data type. 
+
+  
+2.
+(type of [ ]) // o/p - array 
+type of {}) // o/p - object
+type of null) // o/p - object (its a bug in JS it gives type object of null data type. 
+
+ 3. 
+let numbers = {10,20,30,40};
+numbers.push(50);
+numbers.pop();
+
+for(let i = 0; i < numbers.length; i++){
+console.log(numbers[i]);
+}
+
+
+4. 
+we cannont change arr values. as const variable is used, whose value remains same/constant throughout the program.
+
+we can change value , by using let variable instead of const variable.
+
+5.
+let student = { name : "jiya",age: 12, course:"bcA"};
+
+console.log(student.name +", " + student.age + ", "+student.course )
+console.log(student["name"]+", " + student["age"] + ", "+student["course"])
+
+
+6.
+console.log(user.skills[2])
+user.skills.push("react");
+X
+
+
+7.
+for(let i = 1; i < 11; i++){
+console.log(i); 
+}
+
+8.
+for(let i = 0; i < nums.length; i++){
+if(num[i]%2==0){
+console.log(num[i]);
+}
+}
+
+
+9.
+let input = document.getElementById("name").value;
+let btn = document.getElementById("btn");
+let show = document.gerElementById("show");
+
+btn.addEventListener('click',function(){
+show.innerHTML = "hello " + input;
+});
+
+
+10.
+addEventListener
+means, when we do something like( click,hover..) so something (any function) 
+basically, when this happens do this
+
+
+11.
+is says, when we click btn then count will be increament to 1  
+and as it creament its state(memory) will change
+
+
+
+task 1.1
+let marks = [45,67,89];
+
+marks.push(90);
+marks.pop();
+
+console.log(marks[1]);
+
+
+corrections 
+
+task 1.2
+10,50,30
+because, here second statement overwrites the value of index 1
+
+
+task 2.1
+yes allowing, because my adding element we are not reassigning, here we are adding value to already exist array
+
+task 2.2
+no not allowed, beacuse we are reassigning a new array to nums.
+
+task 3.1
+document.getElementById("btn").addEventListener('click',function(){
+let name = document.getElementById("username").value;
+document.getElementById("msg").innerHTML = "hello " + name;
+})
+
+task 3.2
+beause it prevents before event happen. when btn click.
+(in simple- it prevent before storing info of input value)
+
+task 4.1
+let numbers = [2, 4, 6, 8];
+
+for(let i = 0; i < numbers.length; i++){
+  if(numbers[i] > 5){
+    console.log(numbers[i]);
+  }
+}
