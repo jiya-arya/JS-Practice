@@ -1,34 +1,67 @@
-// Task 2: Create an empty array
-// Create let students = []
-// This will store all student objects {name: "", marks: []}
-
 let students = [];
-
-// Function — Add Student
-// Create function addStudent()
-// Read name and marks from DOM
-// Convert marks input (comma separated string) → array of numbers
-// Add {name, marks} object to students array
-// Clear input fields after adding
-// Alert “Student added!”
 
 function addStudent() {
     const nameInput = document.getElementById('studentName');
     const marksInput = document.getElementById('studentMarks');
-    console.log(marksInput.value);
+
+    if (nameInput.value === "" || marksInput.value === "") {
+        alert("Enter Name and Marks");
+        return;
+    }
+
     const name = nameInput.value;
-
-    // let marksInput = 
     let marksArray = marksInput.value.split(",");
-    console.log(marksArray);
     let marks = marksArray.map(mark => parseFloat(mark.trim()));
-    console.log(marks); 
 
+    if (marks.includes(NaN)) {
+        alert("Please enter valid numbers only");
+        return;
+    }
 
+    students.push({ name, marks });
 
+    nameInput.value = "";
+    marksInput.value = "";
+}
 
-    // students.push({ name, marks });
-    // nameInput.value = '';
-    // marksInput.value = '';
-    // alert('Student added!');
+function calculateAverage(marks) {
+    let sum = 0;
+    for (let i = 0; i < marks.length; i++) {
+        sum += marks[i];
+    }
+    return sum / marks.length;
+}
+
+function calculateGrade(avg) {
+    if (avg >= 90) return "A";
+    else if (avg >= 75) return "B";
+    else if (avg >= 50) return "C";
+    else return "Fail";
+}
+
+function generateReport() {
+    let display = document.getElementById("report");
+    display.innerHTML = "";
+
+    let highestAvg = 0;
+    let topStudents = [];
+
+    for (let i = 0; i < students.length; i++) {
+        let avg = calculateAverage(students[i].marks);
+        let grade = calculateGrade(avg);
+
+        display.innerHTML += "<p><b>NAME:</b> " + students[i].name +
+            " | <b>AVERAGE:</b> " + avg.toFixed(2) +
+            " | <b>GRADE:</b> " + grade + "</p><br>";
+
+        if (avg > highestAvg) {
+            highestAvg = avg;
+            topStudents = [students[i].name];
+        } else if (avg === highestAvg) {
+            topStudents.push(students[i].name);
+        }
+    }
+
+    display.innerHTML += "<p><b>Top Student(s):</b> " + topStudents.join(", ") +
+        " | <b>Average:</b> " + highestAvg.toFixed(2) + "</p>";
 }
