@@ -1,3 +1,4 @@
+// task 1
 let nums = [2, 5, 8, 10, 13, 20, -9];
 
 console.log("-----");
@@ -61,3 +62,26 @@ console.log(anyOdd);
 // difference between some and every
 // some checks if at least one element meets the condition
 // every checks if all elements meet the condition
+
+console.log("-----");
+// task 2
+let user = {
+  name: "Jiya",
+  age: 20,
+  skills: ["HTML", "CSS", "JS", "Node.js"]
+};
+// Now:
+// Write a function that prints
+// 👉 Hi Jiya, you know 3 skills
+// Add a new skill "React" without rewriting the object
+// Print all skills using a loop
+let skillCount = user.skills.length;
+user.skills.push("React");
+function printUserSkills(user) {
+    console.log(`Hi ${user.name}, you know ${skillCount} skills`);
+    console.log("Your skills are:");
+    user.skills.forEach(skill => {
+        console.log(skill);
+    });
+}
+printUserSkills(user);
