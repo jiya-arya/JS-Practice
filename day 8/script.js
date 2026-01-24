@@ -1,11 +1,5 @@
 let nums = [2, 5, 8, 10, 13, 20, -9];
 
-for(let i = 0; i < nums.length; i++) {
-    if(nums[i] % 2 === 0) {
-        console.log(nums[i]);
-    }
-}
-
 console.log("-----");
 // we have used here forEach method 
 // what does foreach do?
@@ -23,13 +17,6 @@ nums.forEach(num =>{
 })
 
 console.log("-----");
-console.log(nums);
-for(let i = 0; i < nums.length; i++) {
-    let num2 = nums[i] * 2;
-    console.log(num2);
-}
-
-console.log("-----");
 // here we are using map method
 // map creates a new array populated with the results of calling a provided function on every element in the calling array
 // in simple terms, it transforms each element of the array based on the function we provide
@@ -41,16 +28,6 @@ console.log("-----");
 let doubled = nums.map(num => num * 2);
 console.log(doubled);
 
-
-console.log("-----");
-let greaterThan10 = nums[1]
-for(let i = 0; i < nums.length; i++) {
-    if(nums[i] > 10) {
-        console.log(nums[i]);
-        break;
-    }   
-}
-
 console.log("-----");
 // here we are using find method
 // find method returns the value of the first element in the provided array that satisfies the provided testing function
@@ -61,19 +38,8 @@ console.log("-----");
 let firstGreaterThan10 = nums.find(num => num > 10);
 console.log(firstGreaterThan10);
 
-
 console.log("-----");
 // if all numbers are positive 
-let allPositive1 = true;
-for(let i = 0; i < nums.length; i++) {
-    if(nums[i] < 0) {
-        allPositive1 = false;
-        break;
-    }
-}
-console.log(allPositive1);
-
-console.log("-----");
 // here we are using every method
 // every method tests whether all elements in the array pass the test implemented by the provided function
 // it returns a Boolean value: true if all elements pass the test, and false otherwise
@@ -82,20 +48,8 @@ console.log("-----");
 let allPositive = nums.every(num => num > 0);
 console.log(allPositive);
 
-
-
 console.log("-----");
 // if any number is odd 
-let anyOdd1 = false;
-for(let i = 0; i < nums.length; i++) {
-    if(nums[i] % 2 !== 0) {
-        anyOdd1 = true;
-        break;
-    }
-}
-console.log(anyOdd1);
-
-console.log("-----");
 // here we are using some method
 // some method tests whether at least one element in the array passes the test implemented by the provided function
 // it returns a Boolean value: true if at least one element passes the test, and false otherwise
