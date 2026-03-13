@@ -8,8 +8,24 @@ btn.addEventListener('click', function () {
 
     let display = document.getElementById('getCount');
 
-    let vowels = ['a','e','i','o','u']
+    let vowels = ['a', 'e', 'i', 'o', 'u']
     console.log(vowels);
-    
 
+    let countVowels = (word) => {
+        let count = 0;
+
+        for (let i = 0; i < word.length; i++) {
+            if (vowels.includes(word[i].toLowerCase())) 
+                {
+               count++;
+            }
+            console.log(count);
+
+        }
+        return count;
+    }
+
+    display.innerHTML = "Number of vowels: " + countVowels(word);
+
+    
 });
