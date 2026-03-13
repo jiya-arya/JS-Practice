@@ -35,34 +35,33 @@ checkPalindrome.addEventListener("click", function () {
 
     let result = document.getElementById("result");
     let word = document.getElementById("InputWord");
-    console.log(word.value);
 
-    isPalin = isPalindrome(word.value);
-    console.log(isPalin);
+    let isPalin = isPalindrome(word.value);
 
     if (isPalin) {
-        result.innerHTML = "The word is a palindrome";
+        result.textContent = "The word is a palindrome";
     } else {
-        result.innerHTML = "The word is not a palindrome";
+        result.textContent = "The word is not a palindrome";
     }
 
-
     function isPalindrome(word) {
-        let wordArray = word.split("");
-        console.log(wordArray);
-        let reverseWord = word.split("").reverse();
-        console.log(reverseWord);
-        console.log(wordArray);
 
-        isPalin = false;
+        let wordArray = word.split("");
+        let reverseWord = word.split("").reverse();
+
+        let isPalin = true; // assume palindrome
 
         for (let i = 0; i < wordArray.length; i++) {
-            console.log(wordArray[i], reverseWord[i]);
-            if (wordArray[i] === reverseWord[i]) {
-                isPalin = true;
+
+            if (wordArray[i] !== reverseWord[i]) {
+                isPalin = false;
+                break;
             }
 
         }
+
         return isPalin;
     }
+
 });
+
